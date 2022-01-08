@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   #devise_for :users
-  root 'home#index'
+  root 'charities#index'
+  get "/charities", to: "charities#index"
 
   resources :charities do
     resources :comments, only: [:create]
