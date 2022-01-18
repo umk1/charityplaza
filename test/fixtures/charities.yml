@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  tax_id_number: MyString
+  tax_exempt_status: MyString
+  organization_type: MyString
+  mission: MyText
+  description: MyText
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  postal_code: MyString
+  phone: MyString
+  email: MyString
+  website: MyString
+  published: false
+  approved: false
+
+two:
+  title: MyString
+  tax_id_number: MyString
+  tax_exempt_status: MyString
+  organization_type: MyString
+  mission: MyText
+  description: MyText
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  postal_code: MyString
+  phone: MyString
+  email: MyString
+  website: MyString
+  published: false
+  approved: false
