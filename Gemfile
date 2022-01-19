@@ -34,6 +34,10 @@ gem 'cssbundling-rails' # Install bootstrap 5
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'     #for debugging
+  gem 'binding_of_caller', '~> 1.0'             #for debugging (used by better_errors, shows live shell)
+  gem 'wdm', '~> 0.1.1' if Gem.win_platform?    #avoid polling for changes
+  gem 'faker', '~> 2.19'                        #fake data for testing
 end
 
 group :development do
