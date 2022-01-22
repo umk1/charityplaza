@@ -21,4 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* TODO
+1. Add font awesome
+2. Fix JavaScript issue  for Bootstrap
+3. Add importmap-rails
