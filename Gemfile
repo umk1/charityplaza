@@ -12,6 +12,7 @@ gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
+gem "hotwire-rails", "~> 0.1.3"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -28,8 +29,9 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
-gem 'jsbundling-rails'  # needed for bootstrap javascript
-gem 'cssbundling-rails' # Install bootstrap 5
+gem 'jsbundling-rails'                            # needed for bootstrap javascript
+gem 'cssbundling-rails'                           # Install bootstrap 5
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -57,5 +59,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-gem "hotwire-rails", "~> 0.1.3"
