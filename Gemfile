@@ -32,6 +32,7 @@ gem "bootsnap", require: false
 gem 'jsbundling-rails'                            # needed for bootstrap javascript
 gem 'cssbundling-rails'                           # Install bootstrap 5
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
+gem 'devise', '~> 4.8', '>= 4.8.1'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
