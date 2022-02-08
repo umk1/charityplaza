@@ -1,4 +1,4 @@
-<%= form_with(model: charity) do |form| %>
+<%= simple_form_for charity do |form| %>
   <% if charity.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(charity.errors.count, "error") %> prohibited this charity from being saved:</h2>
@@ -11,87 +11,22 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+    <%= form.input :title %>
+    <%= form.input :tax_id_number %>
+    <%= form.input :tax_exempt_status %>
+    <%= form.input :organization_type %>
+    <%= form.input :mission %>
+    <%= form.input :description %>
+    <%= form.input :address1 %>
+    <%= form.input :address2 %>
+    <%= form.input :city %>
+    <%= form.input :state %>
+    <%= form.input :postal_code %>
+    <%= form.input :phone %>
+    <%= form.input :email %>
+    <%= form.input :website %>
+    <%= form.input :published %>
+    <%= form.input :approved %>
+    <%= form.button :submit, class: "btn btn-primary" %>
 
-  <div>
-    <%= form.label :tax_id_number, style: "display: block" %>
-    <%= form.text_field :tax_id_number %>
-  </div>
-
-  <div>
-    <%= form.label :tax_exempt_status, style: "display: block" %>
-    <%= form.text_field :tax_exempt_status %>
-  </div>
-
-  <div>
-    <%= form.label :organization_type, style: "display: block" %>
-    <%= form.text_field :organization_type %>
-  </div>
-
-  <div>
-    <%= form.label :mission, style: "display: block" %>
-    <%= form.text_area :mission %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.label :address1, style: "display: block" %>
-    <%= form.text_field :address1 %>
-  </div>
-
-  <div>
-    <%= form.label :address2, style: "display: block" %>
-    <%= form.text_field :address2 %>
-  </div>
-
-  <div>
-    <%= form.label :city, style: "display: block" %>
-    <%= form.text_field :city %>
-  </div>
-
-  <div>
-    <%= form.label :state, style: "display: block" %>
-    <%= form.text_field :state %>
-  </div>
-
-  <div>
-    <%= form.label :postal_code, style: "display: block" %>
-    <%= form.text_field :postal_code %>
-  </div>
-
-  <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.label :website, style: "display: block" %>
-    <%= form.text_field :website %>
-  </div>
-
-  <div>
-    <%= form.label :published, style: "display: block" %>
-    <%= form.check_box :published %>
-  </div>
-
-  <div>
-    <%= form.label :approved, style: "display: block" %>
-    <%= form.check_box :approved %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>
