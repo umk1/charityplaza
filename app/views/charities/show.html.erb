@@ -1,11 +1,18 @@
-<% provide(:title, @charity.title )%>
-<p style="color: green"><%= notice %></p>
-
-<%= render @charity %>
+<h1><%= @charity.title %></h1>
 
 <div>
-  <%= link_to "Edit this charity", edit_charity_path(@charity) %> |
-  <%= link_to "Back to charities", charities_path %>
-
-  <%= button_to "Destroy this charity", @charity, method: :delete %>
+  <p><%= @charity.tax_id_number %></p>
+  <p><%= @charity.tax_exempt_status %></p>
+  <p><%= @charity.organization_type %></p>
+  <p><%= @charity.mission %></p>
+  <p><%= @charity.description %></p>
+  <p><%= @charity.address1 %></p>
+  <p><%= @charity.address2 %></p>
+  <p><%= @charity.city %></p>
+  <p><%= @charity.state %></p>
+  <p><%= @charity.postal_code %></p>
+  <p><%= @charity.phone %></p>
+  <p><%= @charity.email %></p>
+  <p><%= @charity.website %></p>
+  <p><%= @charity.approved %></p>
 </div>

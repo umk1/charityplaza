@@ -1,12 +1,12 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.1"
+ruby "3.1.1"
 
 #Rails Default Gems
 gem "rails", "~> 7.0.0"
 gem "sprockets-rails"
-gem 'pg', '~> 1.2', '>= 1.2.3'              # database driver
+gem 'pg', '~> 1.4', '>= 1.4.1'
 gem "puma", "~> 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
