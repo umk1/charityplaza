@@ -2,6 +2,8 @@
 
 <h1>All Charities</h1>
 
+<%= link_to "Add charity", new_charity_path %>
+
 <!-- <div>
 <%# bootstrap icon %>
 <i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>
@@ -15,9 +17,8 @@
   <% @charities.each do |charity| %>
     <%= render charity %>
     <p>
-      <%= link_to "Show this charity", charity %>
+      <%= link_to "Edit charity", edit_charity_path(charity) %> |
+      <%= link_to "Delete charity", charity_path(charity), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     </p>
   <% end %>
 </div>
-
-<%= link_to "New charity", new_charity_path %>
