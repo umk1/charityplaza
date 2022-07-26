@@ -7,4 +7,8 @@ module ApplicationHelper
       "#{page_title} | #{default_title}"
     end
   end
+
+  def time_format(charity_date)
+    charity_date.strftime("%e %b %Y %H:%M:%S%p")
+  end
 end

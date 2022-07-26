@@ -61,6 +61,9 @@ class CharitiesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_charity
       @charity = Charity.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "The page you requested does not exist"
+      redirect_to charities_path
     end
 
     # Only allow a list of trusted parameters through.
