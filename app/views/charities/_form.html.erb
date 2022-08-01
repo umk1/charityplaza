@@ -1,4 +1,3 @@
-<%= simple_form_for charity do |form| %>
   <% if charity.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(charity.errors.count, "error") %> prohibited this charity from being saved:</h2>
@@ -11,6 +10,7 @@
     </div>
   <% end %>
 
+  <%= simple_form_for charity do |form| %>
     <%= form.input :title %>
     <%= form.input :tax_id_number %>
     <%= form.input :tax_exempt_status %>

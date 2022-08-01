@@ -1,18 +1,25 @@
-<p style="color: green"><%= notice %></p>
+<!-- <p style="color: green"><%= notice %></p> -->
 
-<h1>All Charities</h1>
+<header>
+  <h1>All Charities</h1>
 
-<%= link_to "Add charity", new_charity_path %>
+  <ul class="actions">
+    <li><%= link_to "New Charity", new_charity_path, class: "new" %></li>
+  </ul>
+</header>
 
-<!-- <div>
-<%# bootstrap icon %>
-<i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>
-<%# font awesome icons %>
-<i class="fas fa-plus"></i>
-<i class="fas fa-basketball-ball"></i>
-<i class="far fa-check-square"></i>
-</div> -->
+<div class="row">
 
+  <div class="col-sm-3 pull-right"></div>
+  <div class="sidebar">
+    <h3 class="discover">Discover</h3>
+    <ul class="nav nav-pills nav-stacked">
+      <li class="<%= "active" if current_page?("/charities") %>"><%= link_to "All Charities" %> </li>
+    </ul>
+  </div>
+</div>
+
+<body>
 <div id="charities">
   <% @charities.each do |charity| %>
     <%= render charity %>
@@ -22,3 +29,65 @@
     </p>
   <% end %>
 </div>
+</body>
+
+<div>
+<%# bootstrap icon %>
+  <i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>
+  <i class="bi-award"></i>
+  <i class="bi-droplet"></i>
+<%# font awesome icons %>
+  <i class="fas fa-plus"></i>
+  <i class="fas fa-basketball-ball"></i>
+  <i class="far fa-check-square"></i>
+</div>
+
+<!-- <div>
+  <button type="button"
+          class="btn btn-lg btn-danger"
+          data-bs-toggle="popover"
+          title="Popover title"
+          data-bs-content="Amazing content, right ?">
+          Click to toggle popover
+  </button>
+</div> -->
+<!-- <div>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+    Tooltip on top
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+    Tooltip on right
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+    Tooltip on bottom
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+    Tooltip on left
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+    Tooltip with HTML
+  </button> -->
+<!-- Button trigger modal -->
+ <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+</div> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->

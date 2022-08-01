@@ -1,3 +1,170 @@
-@import 'bootstrap/scss/bootstrap';
 @import 'actiontext.css';
+@import 'bootstrap/scss/bootstrap';
+//@import 'bootstrap-icons/font/bootstrap-icons'; //TOFIX not working
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+@import 'charities';
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  // background: #f2f2f2;
+  // padding-top: 10px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  @extend .page-header !optional;
+  position: relative;
+  padding-bottom: 0;
+  border-bottom: 1px solid rgb(222, 226, 230);
+  //border-color: silver;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    max-width: 55%;
+  }
+}
+
+ul.actions {
+  @extend .list-unstyled;
+  @extend .list-inline;
+  position: absolute;
+  bottom: -2px;
+  right: 2px;
+  max-width: 45%;
+  text-align: right;
+}
+
+a.new,
+a.edit,
+a.apply,
+a.delete {
+  @extend .btn;
+
+  &:before {
+    font-family: "FontAwesome";
+    padding-right: 0.5em;
+  }
+}
+
+a.new {
+  @extend .btn-success;
+
+  &:before {
+    @extend .fa-plus !optional;
+  }
+}
+
+a.edit {
+  @extend .btn-info;
+
+  &:before {
+    @extend .fa-pencil !optional;
+  }
+}
+
+a.apply {
+  @extend .btn-warning;
+
+  &:before {
+    @extend .fa-pencil !optional;
+  }
+}
+
+a.delete {
+  @extend .btn-danger;
+
+  &:before {
+    @extend .fa-trash !optional;
+  }
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
+
+
+span.inactive {
+  background: #c9302c;
+
+}
+
+span.active {
+  background: #449d44;
+}
+
+span.active,
+span.inactive {
+  color: #fff;
+  font-weight: bold;
+  border-radius: 3px;
+
+  &:before {
+    font-family: "FontAwesome";
+    padding: 1.5em;
+  }
+}
+
+span.active {
+  &:before {
+    @extend .fa-check !optional;
+  }
+}
+
+span.inactive {
+  &:before {
+    @extend .fa-close !optional;
+  }
+}
+
+.row {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
