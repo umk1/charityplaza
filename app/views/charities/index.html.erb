@@ -1,3 +1,4 @@
+
 <!-- <p style="color: green"><%= notice %></p> -->
 
 <header>
@@ -20,16 +21,6 @@
 </div>
 
 <body>
-<div id="charities">
-  <% @charities.each do |charity| %>
-    <%= render charity %>
-    <p>
-      <%= link_to "Edit charity", edit_charity_path(charity) %> |
-      <%= link_to "Delete charity", charity_path(charity), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-    </p>
-  <% end %>
-</div>
-</body>
 
 <div>
 <%# bootstrap icon %>
@@ -42,7 +33,7 @@
   <i class="far fa-check-square"></i>
 </div>
 
-<!-- <div>
+<div>
   <button type="button"
           class="btn btn-lg btn-danger"
           data-bs-toggle="popover"
@@ -50,8 +41,23 @@
           data-bs-content="Amazing content, right ?">
           Click to toggle popover
   </button>
-</div> -->
-<!-- <div>
+</div>
+<p>
+<p>
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+  Popover on top
+</button>
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+  Popover on right
+</button>
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+  Popover on bottom
+</button>
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+  Popover on left
+</button>
+<p>
+<div>
   <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
     Tooltip on top
   </button>
@@ -66,15 +72,18 @@
   </button>
   <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
     Tooltip with HTML
-  </button> -->
+  </button>
+</div>
+<p>
+<div>
 <!-- Button trigger modal -->
- <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button>
-</div> -->
+</div>
 
 <!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -82,7 +91,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        Modal content
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -90,4 +99,16 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
+<p>
+<div id="charities">
+  <% @charities.each do |charity| %>
+    <%= render charity %>
+    <p>
+      <%= link_to "Edit charity", edit_charity_path(charity) %> |
+      <%= link_to "Delete charity", charity_path(charity), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    </p>
+  <% end %>
+</div>
+</body>
+
