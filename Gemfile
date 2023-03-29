@@ -13,6 +13,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
 gem "hotwire-rails", "~> 0.1.3"
+gem "image_processing", "~> 1.2"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

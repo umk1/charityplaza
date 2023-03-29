@@ -1,5 +1,8 @@
 class Charity < ApplicationRecord
   has_rich_text :description
+  has_one_attached :logo
+  has_many_attached :images
+
   validates :title, presence: true, length: {minimum: 5}, uniqueness: true
   validates :tax_id_number, uniqueness: true
   validates :mission, presence: true

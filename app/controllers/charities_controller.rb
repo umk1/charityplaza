@@ -24,6 +24,7 @@ class CharitiesController < ApplicationController
   # POST /charities or /charities.json
   def create
     @charity = Charity.new(charity_params)
+    session[:charity_id] = @charity.id
 
     respond_to do |format|
       if @charity.save
@@ -70,6 +71,6 @@ class CharitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def charity_params
-      params.require(:charity).permit(:title, :tax_id_number, :tax_exempt_status, :organization_type, :mission, :description, :address1, :address2, :city, :state, :postal_code, :phone, :email, :website, :published, :approved)
+      params.require(:charity).permit(:title, :tax_id_number, :tax_exempt_status, :organization_type, :mission, :description, :address1, :address2, :city, :state, :postal_code, :phone, :email, :website, :published, :approved, :logo, images: [])
     end
 end

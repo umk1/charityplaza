@@ -17,6 +17,11 @@
   <p><%= @charity.email %></p>
   <p><%= @charity.website %></p>
   <p><%= @charity.approved %></p>
+  <p><%= link_to image_tag(@charity.logo, style:"width:150px; height:150px"), @charity.logo if @charity.logo.attached? %></p>
+  <p><% @charity.images.each do |image| %> 
+     <%= link_to image_tag(image, style:"width:150px; height:auto"), image %>
+     <% end %>
+  </p>
 </div>
 
 <div>

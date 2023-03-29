@@ -27,6 +27,8 @@
     <%= form.input :website %>
     <%= form.input :published %>
     <%= form.input :approved %>
+    <%= form.file_field :logo %>
+    <%= form.file_field :images, multiple: true %>
     <%= form.button :submit, class: "btn btn-primary" %>
 
 <% end %>
